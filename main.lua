@@ -10,7 +10,7 @@ local Window = Rayfield:CreateWindow({
    },
    Discord = {
       Enabled = false,
-      Invite = "SIRIUS", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ABCD would be ABCD.
+      Invite = "", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ABCD would be ABCD.
       RememberJoins = false -- Set this to false to make them join the discord every time they load it up
    },
    KeySystem = true, -- Set this to true to use our key system
@@ -24,3 +24,4 @@ local Window = Rayfield:CreateWindow({
       Key = "Admin"
    }
 })
+local Tab = Window:CreateTab("Main", 11818627075) -- Title, Image
