@@ -30,9 +30,9 @@ local Section = Tab:CreateSection("Functions")
 local Slider = Tab:CreateSlider({
    Name = "Speedhack",
    Range = {0, 100},
-   Increment = 10,
+   Increment = 1,
    Suffix = "Speed",
-   CurrentValue = 10,
+   CurrentValue = 1,
    Flag = "Slider1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
    Callback = function(s)
    -- The function that takes place when the slider changes
