@@ -36,7 +36,7 @@ local Slider = Tab:CreateSlider({
  Sufflix = "Speed",
  Current Value = 0,
  Flag = "Slider1",
- Callback = function (s)
+ Callback = function(s)
  game.("Workspace").LocalPlayer.Humanoid.Walkspeed = s
          end,
 })
