@@ -37,7 +37,6 @@ local Slider = Tab:CreateSlider({
    CurrentValue = 10,
    Flag = "Slider1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
    Callback = function(s)
-   game.("Workspace").LocalPlayer.Humanoid.WalkSpeed = s
-   -- 0 min, 100 max
+   game.("Workspace").Players.LocalPlayer.Humanoid.WalkSpeed = s --0 min, 100 max
    end,
 })
