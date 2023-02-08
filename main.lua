@@ -24,4 +24,5 @@ local Window = Rayfield:CreateWindow({
       Key = "Admin"
    }
 })
+
 local Tab = Window:CreateTab("Main", 11818627075) -- Title, Image
