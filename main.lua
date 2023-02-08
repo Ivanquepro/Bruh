@@ -30,13 +30,14 @@ local Tab = Window:CreateTab("Main", 4483362458) -- Title, Image
 local Section = Tab:CreateSection("Speedhack")
 
 local Slider = Tab:CreateSlider({
- Name = "Speedhack",
- Range = {0, 100},
- Increment = 10,
- Suffix = "Speed",
- CurrentValue = 10,
- Flag = "Slider1",
- Callback = function(s) --0 min, 100 max
-  game.("Workspace").LocalPlayer.Humanoid.WalkSpeed = s
- end,
+   Name = "Speedhack",
+   Range = {0, 100},
+   Increment = 10,
+   Suffix = "speed",
+   CurrentValue = 10,
+   Flag = "Slider1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(s)
+   game.("Workspace").LocalPlayer.Humanoid.WalkSpeed = s
+   -- 0 min, 100 max
+   end,
 })
