@@ -32,11 +32,12 @@ local Section = Tab:CreateSection("Speedhack")
 local Slider = Tab:CreateSlider({
  Name = "Speedhack",
  Range = {0, 100},
- Increment = 0,
+ Increment = 10,
  Sufflix = "Speed",
- Current Value = 0,
+ Current Value = 10,
  Flag = "Slider1",
  Callback = function(s)
- game.("Workspace").LocalPlayer.Humanoid.Walkspeed = s
+ game.("Workspace").LocalPlayer.Humanoid.WalkSpeed = 0, 100 --min, max
+ game.("Workspace").LocalPlayer.Humanoid.WalkSpeed = s
  end,
 })
