@@ -29,7 +29,6 @@ local Tab = Window:CreateTab("Main", 4483362458) -- Title, Image
 
 local Section = Main:CreateSection("Functions")
 
-
 local Main = Tab:CreateSlider({
    Name = "Speedhack",
    Range = {0, 100},
@@ -38,6 +37,6 @@ local Main = Tab:CreateSlider({
    CurrentValue = 1,
    Flag = "Slider1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
    Callback = function(s)
-   game.("Workspace").LocalPlayer.Humanoid.Walkspeed = s
+       game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
    end,
 })
