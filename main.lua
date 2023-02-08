@@ -1,6 +1,4 @@
-if game 189707, 1730877806
 local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Rayfield/main/source'))()
-
 local Window = Rayfield:CreateWindow({
    Name = "Bruh Hub",
    LoadingTitle = "Pls teach me scripting",
