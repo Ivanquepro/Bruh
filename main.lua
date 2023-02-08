@@ -29,7 +29,7 @@ local Tab = Window:CreateTab("Main", 4483362458) -- Title, Image
 
 local Section = Main:CreateSection("Functions")
 
-local Main = Tab:CreateSlider({
+local mouse = Main:CreateSlider({
    Name = "Speedhack",
    Range = {0, 100},
    Increment = 1,
