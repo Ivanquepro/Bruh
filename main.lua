@@ -141,14 +141,9 @@ createFlex() --// Does exactly that :)
 })
 
 
-local Slider = Tab:CreateSlider({
-   Name = "Speedhack",
-   Range = {0, 100},
-   Increment = 1,
-   Suffix = "Speed",
-   CurrentValue = 1,
-   Flag = "Slider1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
-   Callback = function(s)
-       game.("Workspace").LocalPlayer.Humanoid.WalkSpeed = s --0 min, 100 max
+local Button = Tab:CreateButton({
+   Name = "WalkSpeed 75",
+   Callback = function()
+   game.("Workspace").LocalPlayer.Humanoid.WalkSpeed = 75
    end,
 })
