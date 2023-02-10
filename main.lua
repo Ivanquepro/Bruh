@@ -139,11 +139,3 @@ end --//End of the entire function
 createFlex() --// Does exactly that :)
    end,
 })
-
-
-local Button = Tab:CreateButton({
-   Name = "WalkSpeed 75",
-   Callback = function()
-   game.("Workspace").LocalPlayer.Humanoid.WalkSpeed = 75
-   end,
-})
