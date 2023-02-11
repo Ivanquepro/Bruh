@@ -140,18 +140,8 @@ end --//End of the entire function
 createFlex() --// Does exactly that :)
 end)
 
-local Paragraph = Section.Component("Card", "Title", "Text here")
-
-local Logs = Main.Logs("Logs name")
-
-local log1 = Logs.LogWithButtons("smh")
-
-local logbutton = log1.Button("something",function()
-
-end)
-
-local Button = Section.Component("Button","Speedhack",function()
-	--w a s d to speedhack
+local Button = Section.Component("Button","Speedhack",function(bool)
+--Use W A S D TO speed
 local Players = game:service("Players")
 local Player = Players.LocalPlayer
 local userInput = game:service("UserInputService")
