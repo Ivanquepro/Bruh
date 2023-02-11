@@ -140,7 +140,7 @@ end --//End of the entire function
 createFlex() --// Does exactly that :)
 end)
 
-local Button = Section.Component("Button","Speedhack",function(bool)
+local Button = Section.Component("Button","Speedhack",function()
 --Use W A S D TO speed
 local Players = game:service("Players")
 local Player = Players.LocalPlayer
@@ -170,10 +170,12 @@ end
 end
 end)
 runService.Stepped:connect(function()
-if userInput:IsKeyDown(Enum.KeyCode.W)
-if userInput:IsKeyDown(Enum.KeyCode.D)
-if userInput:IsKeyDown(Enum.KeyCode.A)
-if userInput:IsKeyDown(Enum.KeyCode.S) then
+if userInput:IsKeyDown(Enum.KeyCode.W) then
 humRoot.CFrame = humRoot.CFrame + pHum.MoveDirection * Multiplier
 end
+end)
+
+local Button = Section.Component("Button","NoFallDamage(in bus)",function()
+if game:GetService("Workspace").PlayerCharacters.gertih5555.FallDamage.Disabled = false
+then do game:GetService("Workspace").PlayerCharacters.gertih5555.FallDamage.Disabled = true
 end)
