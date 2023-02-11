@@ -1,35 +1,36 @@
-local Rayfield = loadstring(game:HttpGet("https://raw.githubusercontent.com/shlexware/Rayfield/main/source"))()
-local Window = Rayfield:CreateWindow({
-   Name = "Bruh Hub",
-   LoadingTitle = "Pls teach me scripting",
-   LoadingSubtitle = "by Ivan",
-   ConfigurationSaving = {
-      Enabled = true,
-      FolderName = nil, -- Create a custom folder for your hub/game
-      FileName = "Big Hub"
-   },
-   Discord = {
-      Enabled = false,
-      Invite = "", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ABCD would be ABCD.
-      RememberJoins = false -- Set this to false to make them join the discord every time they load it up
-   },
-   KeySystem = true, -- Set this to true to use our key system
-   KeySettings = {
-      Title = "Sirius Hub",
-      Subtitle = "Key System",
-      Note = "Join the discord (discord.gg/sirius)",
-      FileName = "SiriusKey",
-      SaveKey = true,
-      GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
-      Key = "Admin"
-   }
-})
+getgenv().LibTheme = {
+    MainColor = Color3.fromRGB(35,35,40);
+    BrighterMainColor = Color3.fromRGB(40,40,45);
+    IconsColor = Color3.fromRGB(100,100,120);
+    Accent = Color3.fromRGB(0,100,255);
+    DarkText = Color3.fromRGB(170,170,170);
+    BrightText = Color3.fromRGB(145,145,145);
+    Font = "Gotham";
+    SoundVolume = 0.2;
+    HideKey = "RightAlt"
+}
 
-local Tab = Window:CreateTab("Main", 4483362458) -- Title, Image
+local Library = loadstring(game:HttpGet("https://github.com/slf0Dev/Ocerium_Project/raw/main/Ocerium%20Special%20ui"))()
 
-local Button = Tab:CreateButton({
-   Name = "Esp Players",
-   Callback = function()
+local Main = Library.Main("Ocerium")
+
+local Page = Main.Page("Main","3926305904",Vector2.new(924, 204),Vector2.new(36, 36))
+
+local Section = Page.Section("Main")
+
+local Toggle = Section.Component("Toggle","Toggle Name",function(bool)
+  
+end,false)
+
+local Dropdown = Section.Component("Dropdown","Dropdown Name",table,false,function(string,bool)
+
+end,false)
+
+local Slider = Section.Component("Slider","Speed",0,100,false,function(s)
+  game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end,16)
+
+local Button = Section.Component("Button","ESP",function()
    --[[
 Script: ESP Script
 Details: Nothing much. Its ESP Chams and the different colors are for different teams.
@@ -137,5 +138,14 @@ end
 end --//End of the entire function
 
 createFlex() --// Does exactly that :)
-   end,
-})
+end)
+
+local Paragraph = Section.Component("Card", "Title", "Text here")
+
+local Logs = Main.Logs("Logs name")
+
+local log1 = Logs.LogWithButtons("smh")
+
+local logbutton = log1.Button("something",function()
+
+end)
