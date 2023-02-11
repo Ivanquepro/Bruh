@@ -147,5 +147,4 @@ local Logs = Main.Logs("Logs name")
 local log1 = Logs.LogWithButtons("smh")
 
 local logbutton = log1.Button("something",function()
-
 end)
