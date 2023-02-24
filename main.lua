@@ -4,48 +4,6 @@ local LegitTab = library:AddTab("Legit");
 local LegitColunm1 = LegitTab:AddColumn();
 local LegitMain = LegitColunm1:AddSection("Aim Assist")
 
--- [Rage Tab UI] ------------------------------------------------------------------------------------------------------------------------------------------------------------
-local RageTab = library:AddTab("Rage"); 
-local RageColunm1 = RageTab:AddColumn();
-local RageMain = RageColunm1:AddSection("Auto Wall")
-
-RageMain:AddDivider("Main");
-RageMain:AddToggle{text = "Enabled", flag = "AutoWallEnabled"}
-
--- [Visuals Tab UI] ------------------------------------------------------------------------------------------------------------------------------------------------------------
-local VisualsTab = library:AddTab("Visuals"); 
-local VisualsColunm1 = VisualsTab:AddColumn();
-local VisualsMain = VisualsColunm1:AddSection("Local Visuals")
-
-VisualsMain:AddDivider("Main");
-VisualsMain:AddToggle{text = "Enabled", flag = "LocalVisualsEnabled"}
-VisualsMain:AddToggle{text = "Custom Arm", flag = "CustomArm"}:AddColor({flag = "ArmColor", color = Color3.new(0.599623620510101318359375, 0.447115242481231689453125, 0.97174417972564697265625)});
-VisualsMain:AddSlider{text = "Transparency", flag = "ArmTransparency", min = 0.10, max = 0.95, float = 0.01, value = 0.85, suffix = "%"}
-VisualsMain:AddList({text = "Material", flag = "ArmMaterial", value = "ForceField", values = {"ForceField", "Neon", "SmoothPlastic"}});
-VisualsMain:AddToggle{text = "Custom Weapon", flag = "CustomWeapon"}:AddColor({flag = "WeaponColor", color = Color3.new(1, 1, 1)});
-VisualsMain:AddSlider{text = "Transparency", flag = "WeaponTransparency", min = 0.10, max = 0.95, float = 0.01, value = 0.85, suffix = "%"}
-VisualsMain:AddList({text = "Material", flag = "WeaponMaterial", value = "ForceField", values = {"ForceField", "Neon", "SmoothPlastic"}});
-VisualsMain:AddDivider("Mesh");
-VisualsMain:AddToggle{text = "Enabled", flag = "TextureEnabled"}
-VisualsMain:AddList({text = "Arm Animation", flag = "ArmAnimation", value = "Bubbles", values = {"Bubbles", "Scanning"}});
-VisualsMain:AddList({text = "Weapon Animation", flag = "WeaponAnimation", value = "Bubbles", values = {"Bubbles", "Scanning"}});
-VisualsMain:AddDivider("Third Person");
-VisualsMain:AddToggle{text = "Enabled", flag = "ThirdPersonEnabled"}:AddColor({flag = "ThirdPersonColor", color = Color3.new(1, 1, 1)});
-VisualsMain:AddList({text = "Material", flag = "ThirdPersonMaterial", value = "ForceField", values = {"ForceField", "SmoothPlastic"}});
-
-local VisualsColunm2 = VisualsTab:AddColumn();
-local VisualsSecond = VisualsColunm2:AddSection("Camera Visuals")
-
-VisualsSecond:AddDivider("Main");
-VisualsSecond:AddToggle{text = "Enabled", flag = "CameraVisualsEnabled"}
-VisualsSecond:AddToggle{text = "Change Camera FOV", flag = "ChangeCameraFOV"}
-VisualsSecond:AddSlider{text = "Camera FOV", flag = "CameraFOV", min = 10, max = 120, value = 120, suffix = "°"}
-VisualsSecond:AddToggle{text = "Remove Round Lock", flag = "RemoveRoundLock"}
-VisualsSecond:AddToggle{text = "No Camera Bob", flag = "NoCameraBob"}
-VisualsSecond:AddToggle{text = "No Gun Bob", flag = "NoGunBob"}
-VisualsSecond:AddToggle{text = "Remove Gun Scope", flag = "RemoveGunScope"}
-VisualsSecond:AddToggle{text = "Anti Suppression", flag = "AntiSuppression"}
-
 -- [Library Settings UI] -----------------------------------------------------------------------------------------------------------------------------------------------------
 local SettingsTab = library:AddTab("Settings"); 
 local SettingsColumn = SettingsTab:AddColumn(); 
