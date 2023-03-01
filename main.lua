@@ -1,49 +1,11 @@
 loadstring(game:HttpGet('https://garfieldscripts.xyz/ui-libs/janlib.lua'))()
 -- [Legit Tab UI] ------------------------------------------------------------------------------------------------------------------------------------------------------------
-local LegitTab = library:AddTab("Legit"); 
-local LegitColunm1 = LegitTab:AddColumn();
-local LegitMain = LegitColunm1:AddSection("Aim Assist")
+local MainTab = library:AddTab("Main"); 
+local MainColunm1 = LegitTab:AddColumn();
+local Main = MainColunm1:AddSection("LocalCheats")
 
-LegitMain:AddDivider("Main");
-LegitMain:AddToggle{text = "Enabled", flag = "AimbotEnabled"}
-LegitMain:AddSlider{text = "Aimbot FOV", flag = "AimbotFov", min = 0, max = 750, value = 105, suffix = "°"}
-LegitMain:AddSlider{text = "Smoothing Factor", flag = "Smoothing", min = 0, max = 30, value = 3, suffix = "%"}
-LegitMain:AddList({text = "Hit Box", flag = "AimbotHitbox", value = "Head", values = {"Head", "Torso"}});
-LegitMain:AddList({text = "Aimbot Key", flag = "AimbotKey", value = "On Aim", values = {"On Aim", "On Shoot"}});
-LegitMain:AddDivider("Draw Fov");
-LegitMain:AddToggle{text = "Enabled", flag = "CircleEnabled"}:AddColor({flag = "CircleColor", color = Color3.new(1, 1, 1)});
-LegitMain:AddSlider{text = "Num Sides", flag = "CircleNumSides", min = 3, max = 48, value = 48, suffix = "°"}
-
-local LegitSecond = LegitColunm1:AddSection("Extend Hitbox")
-LegitSecond:AddDivider("Main");
-LegitSecond:AddToggle{text = "Enabled", flag = "HitboxEnabled"}
-LegitSecond:AddList({text = "Hit Box", flag = "ExtendHitbox", value = "Head", values = {"Head", "Torso"}});
-LegitSecond:AddSlider{text = "Extend Rate", flag = "ExtendRate", min = 0, max = 10, value = 10, suffix = "%"}
-
-local LegitThird = LegitColunm1:AddSection("Trigger Bot")
-LegitThird:AddDivider("Main");
-LegitThird:AddToggle{text = "Enabled", flag = "TriggerEnabled"}:AddBind({flag = "TriggerBind", key = "One"});
-LegitThird:AddSlider{text = "Trigger Speed", flag = "TriggerSpeed", min = 0, max = 1000, value = 10, suffix = "%"}
-
-local LegitColunm2 = LegitTab:AddColumn();
-local LegitForth = LegitColunm2:AddSection("Bullet Redirection")
-LegitForth:AddDivider("Main");
-LegitForth:AddToggle{text = "Enabled", flag = "SilentAimEnabled"}
-LegitForth:AddSlider{text = "Silent Aim FOV", flag = "SilentAimFOV", min = 0, max = 750, value = 105, suffix = "°"}
-LegitForth:AddSlider{text = "Hit Chances", flag = "HitChances", min = 0, max = 100, value = 100, suffix = "%"}
-LegitForth:AddList({text = "Redirection Mode", flag = "RedirectionMode", value = "P Mode", values = {"P Mode", "Normal Mode"}});
-LegitForth:AddList({text = "Hit Box", flag = "SilentAimHitbox", value = "Head", values = {"Head", "Torso"}});
-LegitForth:AddDivider("Draw Fov");
-LegitForth:AddToggle{text = "Enabled", flag = "Circle2Enabled"}:AddColor({flag = "Circle2Color", color = Color3.new(1, 1, 1)});
-LegitForth:AddSlider{text = "Num Sides", flag = "Circle2NumSides", min = 3, max = 48, value = 48, suffix = "°"}
-LegitForth:AddDivider("Checks");
-LegitForth:AddToggle{text = "Enabled", flag = "VisibleCheck"}
-
-local LegitFifth = LegitColunm2:AddSection("Recoil Control")
-LegitFifth:AddDivider("Main");
-LegitFifth:AddToggle{text = "Enabled", flag = "RecoilControlEnabled"}
-LegitFifth:AddSlider{text = "Model Kick", flag = "ModelKick", min = 5, max = 100, value = 100, suffix = "%"}
-LegitFifth:AddSlider{text = "Camera Kick", flag = "CameraKick", min = 5, max = 100, value = 100, suffix = "%"}
+Main:AddDivider("Main");
+Main:AddSlider{text = "Speedhack", flag = "Speed", min = 0, max = 100, value = 1, suffix = ""}
 
 -- [Rage Tab UI] ------------------------------------------------------------------------------------------------------------------------------------------------------------
 local RageTab = library:AddTab("Rage"); 
