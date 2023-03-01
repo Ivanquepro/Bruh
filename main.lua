@@ -1,7 +1,7 @@
 local UILib = loadstring(game:HttpGet('https://raw.githubusercontent.com/StepBroFurious/Script/main/HydraHubUi.lua'))()
-local Window = UILib.new("Grand Piece Online", game.Players.LocalPlayer.UserId, "Buyer")
+local Window = UILib.new("Main", game.Players.LocalPlayer.UserId, "Developer")
 local Category1 = Window:Category("Main", "http://www.roblox.com/asset/?id=8395621517")
-local SubButton1 = Category1:Button("Combat", "http://www.roblox.com/asset/?id=8395747586")
+local SubButton1 = Category1:Button("Main", "http://www.roblox.com/asset/?id=8395747586")
 local Section1 = SubButton1:Section("Section", "Left")
 Section1:Button({
     Title = "Kill All",
@@ -20,25 +20,11 @@ end)
 Section1:Slider({
     Title = "Walkspeed",
     Description = "",
-    Default = 16,
+    Default = 1,
     Min = 0,
-    Max = 120
-    }, function(value)
-    print(value)
-end)
-Section1:ColorPicker({
-    Title = "Colorpicker",
-    Description = "",
-    Default = Color3.new(255,0,0),
-    }, function(value)
-    print(value)
-end)
-Section1:Textbox({
-    Title = "Damage Multiplier",
-    Description = "",
-    Default = "",
-    }, function(value)
-    print(value)
+    Max = 100
+    }, function(s)
+    game:GetService("Workspace").Vlixiz1.Humanoid.WalkSpeed = s
 end)
 Section1:Keybind({
     Title = "Kill All",
