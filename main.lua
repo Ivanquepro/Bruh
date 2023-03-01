@@ -1,7 +1,7 @@
 loadstring(game:HttpGet('https://garfieldscripts.xyz/ui-libs/janlib.lua'))()
 -- [Legit Tab UI] ------------------------------------------------------------------------------------------------------------------------------------------------------------
 local MainTab = library:AddTab("Main"); 
-local MainColunm1 = LegitTab:AddColumn();
+local MainColunm1 = MainTab:AddColumn();
 local Main = MainColunm1:AddSection("LocalCheats")
 
 Main:AddDivider("Main");
