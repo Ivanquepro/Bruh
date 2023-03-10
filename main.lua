@@ -1,60 +1,45 @@
+if game.PlaceId == 6516141723 then
 local UILib = loadstring(game:HttpGet('https://raw.githubusercontent.com/StepBroFurious/Script/main/HydraHubUi.lua'))()
 local Window = UILib.new("Main", game.Players.LocalPlayer.UserId, "Developer")
 local Category1 = Window:Category("Main", "http://www.roblox.com/asset/?id=8395621517")
 local SubButton1 = Category1:Button("Main", "http://www.roblox.com/asset/?id=8395747586")
 local Section1 = SubButton1:Section("Section", "Left")
-Section1:Button({
-    Title = "Wth",
-    ButtonName = "Button",
-    Description = "Wth",
-    }, function(value)
-    
-end)
 Section1:Toggle({
-    Title = "Fly",
-    Description = "Beta",
+    Title = "Key esp",
+    Description = "Key chams",
     Default = false
     }, function(value)
-    
+    for i,v in pairs(KeyChams) do
+            v.Enabled = Value
+        end
+	end    
+})
+
+local function ApplyKeyChams(inst)
+    wait()
+    local Cham = Instance.new("Highlight")
+    Cham.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop
+    Cham.FillColor = Color3.new(0.980392, 0.670588, 0)
+    Cham.FillTransparency = 0.5
+    Cham.OutlineColor = Color3.new(0.792156, 0.792156, 0.792156)
+    Cham.Parent = game:GetService("CoreGui")
+    Cham.Adornee = inst
+    Cham.Enabled = OrionLib.Flags["KeyToggle"].Value
+    Cham.RobloxLocked = true
+    return Cham
+end
+
+local KeyCoroutine = coroutine.create(function()
+    workspace.CurrentRooms.DescendantAdded:Connect(function(inst)
+        if inst.Name == "KeyObtain" then
+            table.insert(KeyChams,ApplyKeyChams(inst))
+        end
+    end)
 end)
-Section1:Slider({
-    Title = "Walkspeed",
-    Description = "",
-    Default = 26,
-    Min = 0,
-    Max = 200
-    }, function(s)
-    game:GetService("Workspace").Vlixiz1.Humanoid.WalkSpeed = s
-end)
-Section1:Keybind({
-    Title = "Noclip Beta",
-    Description = "Beta noclip",
-    Default = Enum.KeyCode.N,
-    }, function(value)
-end)
-Section1:Slider({
-    Title = "HipHeight",
-    Description = "HipHeight",
-    Default = 2,
-    Min = 0,
-    Max = 100
-    }, function(s)
-    game:GetService("Workspace").Vlixiz1.Humanoid.HipHeight = s
-end)
-Section1:Slider({
-    Title = "JumpPower",
-    Description = "JumpPower",
-    Default = 50,
-    Min = 0,
-    Max = 100
-    }, function(s)
-    game:GetService("Workspace").Vlixiz1.Humanoid.JumpHeight = s
-end)
-local Section1 = SubButton1:Section("Beta", "Right")
-Section1:Button({
-    Title = "Destroy",
-    ButtonName = "Button",
-    Description = "Wth",
-    }, function(value)
-    
+for i,v in ipairs(workspace:GetDescendants()) do
+    if v.Name == "KeyObtain" then
+        table.insert(KeyChams,ApplyKeyChams(v))
+    end
+end
+coroutine.resume(KeyCoroutine)
 end)
